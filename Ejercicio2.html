@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+	<head> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+			<title>Texto</title>
+			<script>
+			
+			var numero = parseInt(prompt("Escribe un numero entero"));
+			var digitos = 0;
+
+			if (isNaN(numero)){
+					alert ("El numero " + numero + " no es un número.");
+					
+			}else{
+				if (numero % 1 == 0) {
+					
+					/*Asi sería en java, pero no se como hacerlo en javascript
+					while(numero !=0){
+						numero = numero/10;
+						digitos++;
+					}
+					alert ("El numero introducido tiene " +digitos+ " digitos.");
+					*/
+					
+					// mayor que -10 y menor que 10
+					
+					if (numero>-10 && numero<10){
+					alert("El numero contiene 1 digitos");
+					
+					}else if((numero>=10 && numero<100) || ((numero>-100 && numero<=-10))){
+						alert("El numero contiene 2 digitos");
+					
+					}else if((numero>=100 && numero<1000) || ((numero>-1000 && numero<=-100))){
+						alert("El numero contiene 3 digitos");
+					
+					}else{
+						alert("El numero indicado contiene 4 o mas cifras");
+}
+					
+				}else{
+				// Esta linea en principio está como precaucion, aunque no debería de ejecutarse en casos normales. Al utilizar parseInt, hacemos un cast a enteros.
+					alert ("Es un numero introducido no es un numero entero");
+						
+				}
+			}
+			
+	
+			</script>
+
+		<head>
+	
+	<body>
+		
+		<p></p>
+	</body>
+</html>

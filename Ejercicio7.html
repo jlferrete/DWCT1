@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+	<head> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+			<title>EJERCICIO 7</title>
+			<script type="text/javascript">
+				var dni = prompt ("Ingrese su DNI completo", "");
+				var cadena="TRWAGMYFPDXBNJZSQVHLCKET";
+				var digitos= dni.substring(0,dni.length-1);
+				var letra= dni.charAt(dni.length-1);
+				
+				
+				
+				if(digitos>0 && digitos<99999999){
+					
+					var control = digitos%23;
+					var letraControl = cadena.charAt(control);
+														
+					//alert (letra+" , "+letraControl+" , "+digitos);
+					
+					
+					if (letra==letraControl){
+					alert("El DNI y la letra son correctos");
+					}
+					
+					else{
+					alert("La letra del DNI introducida no es correcta");
+					} 
+				}
+
+				else{
+						alert("El DNI introducido no es valido, el número debe ser mayor que 0 y menor que 99999999");
+					}
+				
+				
+										
+			</script>
+	</head>
+	
+	<body>
+	
+	<h1>Ejercicio 7</h1>
+		
+		<p>El cálculo de la letra del Documento Nacional de Identidad (DNI) es un proceso matemático que se basa en obtener el resto de la división entera del número de DNI y el número 23. A partir del resto de la división, se obtiene la letra seleccionándola dentro de un array de letras.<BR/>
+El array de letras es: <BR/>
+var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T']; <BR/>
+Por tanto si el resto de la división es 0, la letra del DNI es la T y si el resto es 3 la letra es la A. <BR/>
+Con estos datos, elaborar un pequeño script que:<BR/>
+1. Almacene en una variable el número de DNI indicado por el usuario y en otra variable la letra del DNI que se ha indicado. (Pista: si se quiere pedir directamente al usuario que indique su número y su letra, se puede utilizar la función prompt())<BR/>
+2. En primer lugar (y en una sola instrucción) se debe comprobar si el número es menor que 0 o mayor que 99999999. Si ese es el caso, se muestra un mensaje al usuario indicando que el número proporcionado no es válido y el programa no muestra más mensajes.<BR/>
+3. Si el número es válido, se calcula la letra que le corresponde según el método explicado anteriormente.<BR/>
+4. Una vez calculada la letra, se debe comparar con la letra indicada por el usuario. Si no coinciden, se muestra un mensaje al usuario diciéndole que la letra que ha indicado no es correcta. En otro caso, se muestra un mensaje indicando que el número y la letra de DNI son correctos.</p>
+	</body>
+</html>

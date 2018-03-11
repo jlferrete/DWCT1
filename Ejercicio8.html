@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+	<head> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+			<title>Texto</title>
+			<script>
+
+var numMayor=0;
+var numMenor=0;
+var suma=0;
+var media=0;
+
+var numero= [];
+for(var i=0;i<5;i++){
+	numero[i] = parseFloat(prompt("Escribe una nota a ingresar"));
+	suma = suma + numero[i];
+}
+
+
+numMenor = Math.min.apply(Math, numero);
+numMayor = Math.max.apply(Math, numero);
+media = suma/5;
+
+document.write("El mayor de los numeros introducidos es "+numMayor+"<BR/>El menor de los numeros introducidos es "+numMenor+"<BR/>La media de los numeros introducidos es "+media);
+			
+			</script>
+
+		<head>
+	
+	<body>
+		
+		<p></p>
+	</body>
+</html>

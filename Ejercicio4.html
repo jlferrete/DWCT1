@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+	<head> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+			<title>Texto</title>
+			<script>
+
+var numFinal = 10;
+var numInicial = 2;
+var numerosPrimos = [];
+
+for (numInicial; numInicial < numFinal; numInicial++) {
+
+  if (primo(numInicial)) {
+    numerosPrimos.push(numInicial);
+  }
+  
+}
+
+document.write("Los numeros primos encontrados son: "+numerosPrimos);
+
+function primo(numero) {
+
+  for (var numFinal = 2; numFinal < numero; numFinal++) {
+
+    if (numero % numFinal === 0) {
+      return false;
+    }
+
+  }
+
+  return numero !== 1;
+}
+
+			
+			</script>
+
+		<head>
+	
+	<body>
+		
+		<p></p>
+	</body>
+</html>
